@@ -1,0 +1,30 @@
+.navbar {
+  background-color: white;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.navbar ul li {
+  font-size: min(20px, 2.5vw);
+  cursor: pointer;
+  color: black;
+}
+
+.navbar ul li:hover {
+  font-weight: bold;
+}
+
+.navbar .logo {
+  width: min(200px, 20vw);
+}

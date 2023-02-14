@@ -1,0 +1,24 @@
+.section-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  cursor: initial;
+  top: 60px;
+  right: 0;
+  left: 0;
+  color: black;
+  background-color: yellow;
+  width: 100%;
+}
+
+.section-list a {
+  font-weight: normal;
+  margin: 10px 30px;
+  width: fit-content;
+}
+
+.section-list a:hover {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
