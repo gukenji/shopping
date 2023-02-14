@@ -3,6 +3,7 @@
   display: flex;
   padding: 10px 20px;
   align-items: center;
+  margin: 0 300px;
 }
 
 .navbar ul {
@@ -12,17 +13,24 @@
   align-items: center;
   gap: 20px;
   justify-content: flex-end;
-  margin-right: 100px;
 }
 
 .navbar ul li {
-  font-size: min(20px, 2.5vw);
   cursor: pointer;
   color: black;
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+  align-items: center;
 }
 
 .navbar ul li:hover {
   font-weight: bold;
+  color: rgba(0, 0, 0, 0.514);
+}
+
+.navbar ul li svg {
+  font-size: inherit;
 }
 
 .navbar .logo {

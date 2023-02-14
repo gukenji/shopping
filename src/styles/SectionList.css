@@ -7,8 +7,10 @@
   right: 0;
   left: 0;
   color: black;
-  background-color: yellow;
-  width: 100%;
+  background-color: white;
+  min-height: 360px;
+  max-height: 400px;
+  padding: 10px 0;
 }
 
 .section-list a {
@@ -18,7 +20,7 @@
 }
 
 .section-list a:hover {
-  color: white;
+  color: rgba(0, 0, 0, 0.514);
   font-weight: bold;
   cursor: pointer;
 }

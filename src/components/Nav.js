@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import { useOnHoverOutside } from "./../hooks/useOnHoverOutside";
 import SectionList from "./TShirts";
 import logo from "../images/logo.webp";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Nav = ({ quantity }) => {
   const dropdownRef = useRef(null); // Create a reference for dropdown container
@@ -21,7 +22,9 @@ const Nav = ({ quantity }) => {
         <img src={logo} className="logo" />
       </div>
       <ul>
-        <li>Carrinho: {quantity}</li>
+        <li>
+          <ShoppingCartIcon /> {quantity}
+        </li>
       </ul>
     </nav>
   );
