@@ -6,7 +6,6 @@
   top: 60px;
   right: 0;
   left: 0;
-  color: black;
   background-color: white;
   min-height: 360px;
   max-height: 400px;
@@ -16,7 +15,9 @@
 .section-list a {
   font-weight: normal;
   margin: 10px 30px;
+  color: black;
   width: fit-content;
+  text-decoration: none;
 }
 
 .section-list a:hover {

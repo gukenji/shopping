@@ -1,8 +1,8 @@
 import "../styles/SectionNav.css";
 import React, { useState, useRef } from "react";
 import { useOnHoverOutside } from "./../hooks/useOnHoverOutside";
-import TShirts from "./TShirts";
-import Shoes from "./Shoes";
+import TShirts from "./nav/TShirts";
+import Shoes from "./nav/Shoes";
 
 const SectionNav = () => {
   const dropdownRef = useRef(null); // Create a reference for dropdown container
@@ -20,26 +20,40 @@ const SectionNav = () => {
     setShoesDropDownOpen(false);
   };
 
-  useOnHoverOutside(dropdownRef, closeTShirtMenu); // Call the hook
-  useOnHoverOutside(dropdownRef2, closeShoesMenu); // Call the hook
+  const removeGray = () => {
+    const showcase = document.getElementsByClassName("showcase")[0];
+    showcase.classList.remove("gray");
+  };
+
+  const openTShirtMenu = () => {
+    const showcase = document.getElementsByClassName("showcase")[0];
+    setTShirtDropDownOpen(true);
+    showcase.classList.add("gray");
+  };
+
+  const openShoesMenu = () => {
+    const showcase = document.getElementsByClassName("showcase")[0];
+    setShoesDropDownOpen(true);
+    showcase.classList.add("gray");
+  };
+
+  // Call the hook
+  useOnHoverOutside(dropdownRef, closeTShirtMenu);
+  useOnHoverOutside(dropdownRef2, closeShoesMenu);
 
   return (
     <nav className="section-navbar">
       <ul>
         <li ref={dropdownRef}>
           <div
-            onMouseOver={() => setTShirtDropDownOpen(true)} //use mouseover event to show dropdown
+            onMouseOver={() => openTShirtMenu()} //use mouseover event to show dropdown
           >
             Camisetas
           </div>
           {isMenuDropDownOpen && <TShirts />}
         </li>
         <li ref={dropdownRef2}>
-          <div
-            onMouseOver={() => setShoesDropDownOpen(true)} //use mouseover event to show dropdown
-          >
-            Tênis
-          </div>
+          <div onMouseOver={() => openShoesMenu()}>Tênis</div>
           {isShoesDropDownOpen && <Shoes />}
         </li>
       </ul>

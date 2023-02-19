@@ -4,7 +4,7 @@ import SectionNav from "./components/SectionNav";
 import Home from "./components/Home";
 function App() {
   return (
-    <div>
+    <div className="main">
       <Nav quantity={0} />
       <SectionNav />
       <Home />

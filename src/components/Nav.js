@@ -1,7 +1,6 @@
 import "../styles/Nav.css";
 import React, { useState, useRef } from "react";
 import { useOnHoverOutside } from "./../hooks/useOnHoverOutside";
-import SectionList from "./TShirts";
 import logo from "../images/logo.webp";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
